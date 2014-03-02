@@ -1,4 +1,4 @@
-/* 
+п»ї/* 
  *  Oneway Studio. Copyright 2008-2014.
  *  All rights reserved.
  * 
@@ -11,18 +11,18 @@
  *  @uses
  *      $(form).validationForm(options);
  *      options = {
- *          dataItemValidationRule  : 'validation-rule',            // data-атрибут для правил валидации элементов формы (возможные значение: required, equal[id], min-lengh[n], type[text, email, phone, date, number])
- *          dataItemErrorMessage    : 'error',                      // data-атрибут для выдергивания сообщений об ошибках из элементов формы 
- *          dataItemPlaceholder     : 'placeholder',                // data-атрибут для подсказки*
+ *          dataItemValidationRule  : 'validation-rule',            // data-Р°С‚СЂРёР±СѓС‚ РґР»СЏ РїСЂР°РІРёР» РІР°Р»РёРґР°С†РёРё СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹ (РІРѕР·РјРѕР¶РЅС‹Рµ Р·РЅР°С‡РµРЅРёРµ: required, equal[id], min-lengh[n], type[text, email, phone, date, number])
+ *          dataItemErrorMessage    : 'error',                      // data-Р°С‚СЂРёР±СѓС‚ РґР»СЏ РІС‹РґРµСЂРіРёРІР°РЅРёСЏ СЃРѕРѕР±С‰РµРЅРёР№ РѕР± РѕС€РёР±РєР°С… РёР· СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹ 
+ *          dataItemPlaceholder     : 'placeholder',                // data-Р°С‚СЂРёР±СѓС‚ РґР»СЏ РїРѕРґСЃРєР°Р·РєРё*
  *
- *          itemErrorClass          : 'form_item_ERROR',            // класс для выделения валидируемого элемента формы (если он не валидный)
- *          errorTooltipClass       : 'def_form_message_ERROR',     // класс для контейнера с tooltip-ошибкой
- *          errorTooltipTextClass   : 'dfmE_text',                  // класс для текста контейнера с tooltip-ошибкой
+ *          itemErrorClass          : 'form_item_ERROR',            // РєР»Р°СЃСЃ РґР»СЏ РІС‹РґРµР»РµРЅРёСЏ РІР°Р»РёРґРёСЂСѓРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р° С„РѕСЂРјС‹ (РµСЃР»Рё РѕРЅ РЅРµ РІР°Р»РёРґРЅС‹Р№)
+ *          errorTooltipClass       : 'def_form_message_ERROR',     // РєР»Р°СЃСЃ РґР»СЏ РєРѕРЅС‚РµР№РЅРµСЂР° СЃ tooltip-РѕС€РёР±РєРѕР№
+ *          errorTooltipTextClass   : 'dfmE_text',                  // РєР»Р°СЃСЃ РґР»СЏ С‚РµРєСЃС‚Р° РєРѕРЅС‚РµР№РЅРµСЂР° СЃ tooltip-РѕС€РёР±РєРѕР№
  *
- *          useAjax                 : false,                        // флаг, определяющий, нужно ли форму сабмитить браузером или нет.
- *                                                                   // Если false, то данные с формы будут отсылаться браузером, не зависимо от того. сработала функция onAfterSuccessValidate или нет
+ *          useAjax                 : false,                        // С„Р»Р°Рі, РѕРїСЂРµРґРµР»СЏСЋС‰РёР№, РЅСѓР¶РЅРѕ Р»Рё С„РѕСЂРјСѓ СЃР°Р±РјРёС‚РёС‚СЊ Р±СЂР°СѓР·РµСЂРѕРј РёР»Рё РЅРµС‚.
+ *                                                                   // Р•СЃР»Рё false, С‚Рѕ РґР°РЅРЅС‹Рµ СЃ С„РѕСЂРјС‹ Р±СѓРґСѓС‚ РѕС‚СЃС‹Р»Р°С‚СЊСЃСЏ Р±СЂР°СѓР·РµСЂРѕРј, РЅРµ Р·Р°РІРёСЃРёРјРѕ РѕС‚ С‚РѕРіРѕ. СЃСЂР°Р±РѕС‚Р°Р»Р° С„СѓРЅРєС†РёСЏ onAfterSuccessValidate РёР»Рё РЅРµС‚
  *
- *          callbacks               : {                             // функции, вызывающиеся при валидации формы
+ *          callbacks               : {                             // С„СѓРЅРєС†РёРё, РІС‹Р·С‹РІР°СЋС‰РёРµСЃСЏ РїСЂРё РІР°Р»РёРґР°С†РёРё С„РѕСЂРјС‹
  *               onSubmitForm             : function(form) {},
  *               onBeforeValidate         : function(element) {},         
  *               onAfterValidate          : function(element, dataResult) {},          
@@ -32,7 +32,7 @@
  *      }
  */
 
-// Мигание элемента
+// РњРёРіР°РЅРёРµ СЌР»РµРјРµРЅС‚Р°
 $.fn.blinkEffect = function(opt) {
 
 	var obj = $(this);
@@ -56,20 +56,20 @@ $.fn.blinkEffect = function(opt) {
 (function($) {
     var methods = {
         init : function(opt) {
-            /* Настройки */
+            /* РќР°СЃС‚СЂРѕР№РєРё */
             var options = $.extend(true, {
-                    dataItemValidationRule  : 'validation-rule',            // data-атрибут для правил валидации элементов формы (возможные значение: required, equal[id], min-lengh[n], type[text, email, phone, date, number])
-                    dataItemErrorMessage    : 'error',                      // data-атрибут для выдергивания сообщений об ошибках из элементов формы 
-                    dataItemPlaceholder     : 'placeholder',                // data-атрибут для подсказки
+                    dataItemValidationRule  : 'validation-rule',            // data-Р°С‚СЂРёР±СѓС‚ РґР»СЏ РїСЂР°РІРёР» РІР°Р»РёРґР°С†РёРё СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹ (РІРѕР·РјРѕР¶РЅС‹Рµ Р·РЅР°С‡РµРЅРёРµ: required, equal[id], min-lengh[n], type[text, email, phone, date, number])
+                    dataItemErrorMessage    : 'error',                      // data-Р°С‚СЂРёР±СѓС‚ РґР»СЏ РІС‹РґРµСЂРіРёРІР°РЅРёСЏ СЃРѕРѕР±С‰РµРЅРёР№ РѕР± РѕС€РёР±РєР°С… РёР· СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹ 
+                    dataItemPlaceholder     : 'placeholder',                // data-Р°С‚СЂРёР±СѓС‚ РґР»СЏ РїРѕРґСЃРєР°Р·РєРё
                     
-                    itemErrorClass          : 'form_item_ERROR',            // класс для выделения валидируемого элемента формы (если он не валидный)
-                    errorTooltipClass       : 'def_form_message_ERROR',     // класс для контейнера с tooltip-ошибкой
-                    errorTooltipTextClass   : 'dfmE_text',                  // класс для текста контейнера с tooltip-ошибкой
+                    itemErrorClass          : 'form_item_ERROR',            // РєР»Р°СЃСЃ РґР»СЏ РІС‹РґРµР»РµРЅРёСЏ РІР°Р»РёРґРёСЂСѓРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р° С„РѕСЂРјС‹ (РµСЃР»Рё РѕРЅ РЅРµ РІР°Р»РёРґРЅС‹Р№)
+                    errorTooltipClass       : 'def_form_message_ERROR',     // РєР»Р°СЃСЃ РґР»СЏ РєРѕРЅС‚РµР№РЅРµСЂР° СЃ tooltip-РѕС€РёР±РєРѕР№
+                    errorTooltipTextClass   : 'dfmE_text',                  // РєР»Р°СЃСЃ РґР»СЏ С‚РµРєСЃС‚Р° РєРѕРЅС‚РµР№РЅРµСЂР° СЃ tooltip-РѕС€РёР±РєРѕР№
                     
-                    useAjax                 : false,                        // флаг, определяющий, нужно ли форму сабмитить браузером или нет.
-                                                                            // Если false, то данные с формы будут отсылаться браузером, не зависимо от того. сработала функция onAfterSuccessValidate или нет
+                    useAjax                 : false,                        // С„Р»Р°Рі, РѕРїСЂРµРґРµР»СЏСЋС‰РёР№, РЅСѓР¶РЅРѕ Р»Рё С„РѕСЂРјСѓ СЃР°Р±РјРёС‚РёС‚СЊ Р±СЂР°СѓР·РµСЂРѕРј РёР»Рё РЅРµС‚.
+                                                                            // Р•СЃР»Рё false, С‚Рѕ РґР°РЅРЅС‹Рµ СЃ С„РѕСЂРјС‹ Р±СѓРґСѓС‚ РѕС‚СЃС‹Р»Р°С‚СЊСЃСЏ Р±СЂР°СѓР·РµСЂРѕРј, РЅРµ Р·Р°РІРёСЃРёРјРѕ РѕС‚ С‚РѕРіРѕ. СЃСЂР°Р±РѕС‚Р°Р»Р° С„СѓРЅРєС†РёСЏ onAfterSuccessValidate РёР»Рё РЅРµС‚
                     
-                    callbacks               : {                             // функции, вызывающиеся при валидации формы
+                    callbacks               : {                             // С„СѓРЅРєС†РёРё, РІС‹Р·С‹РІР°СЋС‰РёРµСЃСЏ РїСЂРё РІР°Р»РёРґР°С†РёРё С„РѕСЂРјС‹
                         onSubmitForm             : function(form) {},
                         onBeforeValidate         : function(element) {},         
                         onAfterValidate          : function(element, dataResult) {},          
@@ -99,7 +99,7 @@ $.fn.blinkEffect = function(opt) {
                        (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
             }
             
-            // Вывод ошибок
+            // Р’С‹РІРѕРґ РѕС€РёР±РѕРє
             var showError = function($this, errorMsg) {
                 $this.parent().find('.'+options.errorTooltipTextClass).html(errorMsg);
                 $this.addClass(options.itemErrorClass);
@@ -111,8 +111,8 @@ $.fn.blinkEffect = function(opt) {
                 $this.parent().find('.'+options.errorTooltipClass).hide(200);
             }
             
-            // Функции валидации по типу type[text, email, phone, date, number]
-            // Если необходимо будет расширить type, то добавим сюда новое свойство
+            // Р¤СѓРЅРєС†РёРё РІР°Р»РёРґР°С†РёРё РїРѕ С‚РёРїСѓ type[text, email, phone, date, number]
+            // Р•СЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ Р±СѓРґРµС‚ СЂР°СЃС€РёСЂРёС‚СЊ type, С‚Рѕ РґРѕР±Р°РІРёРј СЃСЋРґР° РЅРѕРІРѕРµ СЃРІРѕР№СЃС‚РІРѕ
             var methodTypes = {
                 text : function(text) {
                     return true;
@@ -136,8 +136,8 @@ $.fn.blinkEffect = function(opt) {
                 }
             }
             
-            // Функции валидации по правилам rules [type, required, equal, min-length]
-            // Если необходимо будет расширить правила, то добавим сюда новое свойство
+            // Р¤СѓРЅРєС†РёРё РІР°Р»РёРґР°С†РёРё РїРѕ РїСЂР°РІРёР»Р°Рј rules [type, required, equal, min-length]
+            // Р•СЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ Р±СѓРґРµС‚ СЂР°СЃС€РёСЂРёС‚СЊ РїСЂР°РІРёР»Р°, С‚Рѕ РґРѕР±Р°РІРёРј СЃСЋРґР° РЅРѕРІРѕРµ СЃРІРѕР№СЃС‚РІРѕ
             var methodRules = {
                 'type' : function(type, value) {
                     return methodTypes[type](value);
@@ -156,8 +156,8 @@ $.fn.blinkEffect = function(opt) {
                 }
             }
             
-            // Функция проверки валидности элемента по правилам validateRule
-            // Сюда передается объект следующего вида: { type[text, email, phone, date, number], required[true, false], equal[id], min-length[count] }
+            // Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё РІР°Р»РёРґРЅРѕСЃС‚Рё СЌР»РµРјРµРЅС‚Р° РїРѕ РїСЂР°РІРёР»Р°Рј validateRule
+            // РЎСЋРґР° РїРµСЂРµРґР°РµС‚СЃСЏ РѕР±СЉРµРєС‚ СЃР»РµРґСѓСЋС‰РµРіРѕ РІРёРґР°: { type[text, email, phone, date, number], required[true, false], equal[id], min-length[count] }
             var validate = function($this, validateRule, checkEmptyField) {
                 var thisValue = $this.attr('value');
                 var thisPlaceholder = $this.data(options.dataItemPlaceholder);
@@ -187,7 +187,7 @@ $.fn.blinkEffect = function(opt) {
                 return validResult;
             };
             
-            // Функция для валидации полей формы
+            // Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІР°Р»РёРґР°С†РёРё РїРѕР»РµР№ С„РѕСЂРјС‹
             var formValidate = function($elements) {
                 var validResult = true;
                 
@@ -200,15 +200,15 @@ $.fn.blinkEffect = function(opt) {
                         validResult = validResult && curValidResult;
                         
                         if (!curValidResult)
-                            $('.'+options.errorTooltipTextClass, $item.parent()).blinkEffect(); // Мигание элемента
+                            $('.'+options.errorTooltipTextClass, $item.parent()).blinkEffect(); // РњРёРіР°РЅРёРµ СЌР»РµРјРµРЅС‚Р°
                     }
                 });
                 
                 return validResult;
             };
             
-            // Функция прокрутки страницы до последней ошибки
-            // (актуально для больших форм, когда текст ошибки находится за экраном)
+            // Р¤СѓРЅРєС†РёСЏ РїСЂРѕРєСЂСѓС‚РєРё СЃС‚СЂР°РЅРёС†С‹ РґРѕ РїРѕСЃР»РµРґРЅРµР№ РѕС€РёР±РєРё
+            // (Р°РєС‚СѓР°Р»СЊРЅРѕ РґР»СЏ Р±РѕР»СЊС€РёС… С„РѕСЂРј, РєРѕРіРґР° С‚РµРєСЃС‚ РѕС€РёР±РєРё РЅР°С…РѕРґРёС‚СЃСЏ Р·Р° СЌРєСЂР°РЅРѕРј)
             var scrollToTop = function() {
                 var onScreen = lastErrorBlock.not(':onScreen').length > 0;
                 if (onScreen) {
@@ -217,7 +217,7 @@ $.fn.blinkEffect = function(opt) {
                 }
             }
             
-            // События для полей форм
+            // РЎРѕР±С‹С‚РёСЏ РґР»СЏ РїРѕР»РµР№ С„РѕСЂРј
             $items.each(function() {
                 var $item = $(this);
                 var validateRule = $item.data(options.dataItemValidationRule);
@@ -262,7 +262,7 @@ $.fn.blinkEffect = function(opt) {
         } else if (typeof method === 'object' || !method) {
             return methods.init.apply(this, arguments);
         } else {
-            $.error( 'Метод с именем ' +  method + ' не существует для jQuery.validationForm');
+            $.error( 'РњРµС‚РѕРґ СЃ РёРјРµРЅРµРј ' +  method + ' РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РґР»СЏ jQuery.validationForm');
         }   
     };
 })(jQuery);
